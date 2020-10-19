@@ -1,0 +1,17 @@
+@isTest
+public class GoldClass {
+@isTest
+    public static void IsGoldTrue()
+    {
+        
+        Account ac=new Account(Name='Isgold Test Class',First_Name__c='IsGold',Last_Name__c='One');
+        insert ac;
+        Opportunity opp=new Opportunity(Name='Test Class 1',AccountId=ac.Id,CloseDate=Date.newInstance(2020, 09, 26),Amount=20000,StageName='Prospecting');
+        insert opp;
+        Test.startTest();
+        opp.Amount=675645;
+        Update opp;
+        Test.stopTest();
+        
+    }
+}

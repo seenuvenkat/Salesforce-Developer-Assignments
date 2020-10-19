@@ -1,0 +1,17 @@
+@isTest
+public class UpdateAccountClass{
+    @isTest private static void ContactTrue()
+    {
+        Account oldAcc=new Account(Name='Account Test class 1',First_Name__c='Subash',Last_Name__c='sambath');
+        insert oldAcc;
+    }
+    @isTest private static void ContactFalse()
+    {
+        Account newAcc=new Account(Name='Account Test class 2',First_Name__c='Revathi',Last_Name__c='Sekar');
+        insert newAcc;
+        Contact Con=new Contact(FirstName='Bala',LastName='Kumar',AccountId=newAcc.Id);
+        insert Con;
+    }
+    
+    
+}

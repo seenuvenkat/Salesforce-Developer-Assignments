@@ -1,0 +1,8 @@
+@isTest
+public class Contactclass {
+    @isTest private static void CreateDefaultContact()
+    {
+        Account Acc=new Account(Name='Contact Test',First_Name__c='Swetha',Last_Name__c='Sekar');
+        insert Acc;
+    }
+}
